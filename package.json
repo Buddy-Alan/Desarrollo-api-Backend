@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js --PORT 8081",
+    "start": "node server.js",
     "startprof": "node --prof server.js",
     "arillery-con-console": "artillery  quick --count 20 -n 50 http://localhost:8080/INFO > con_console.txt",
     "arillery-sin-console": "artillery  quick --count 20 -n 50 http://localhost:8080/INFO > con_console.txt"
