@@ -27,7 +27,7 @@ import { logger } from "./logger.js";
 
 const objtArguments = parsedArgs(process.argv.slice(2))
 // const PORT = objtArguments.PORT && objtArguments.PORT != true ? objtArguments.PORT : 8080
-puerto = process.env.PORT || 8080;
+const puerto = process.env.PORT || 8080;
 //URL Mongo Atlas
 const url = "mongodb://127.0.0.1:27017/chatMongo"//URL local
 const usuariosDB = config.BDusuarios
