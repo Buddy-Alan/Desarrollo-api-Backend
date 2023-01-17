@@ -21,13 +21,12 @@ import random from "./src/routes/randomNmr.js";
 import prueba from "./src/routes/pruebaRandomNmr.js";
 import parsedArgs from "minimist";
 import { logger } from "./logger.js";
-import { Console } from "console";
 
 
 
 
 const objtArguments = parsedArgs(process.argv.slice(2))
-const puerto = objtArguments.port && objtArguments.port != true ? objtArguments.port : 8080
+const PORT = objtArguments.PORT && objtArguments.PORT != true ? objtArguments.PORT : 8080
 //URL Mongo Atlas
 const url = "mongodb://127.0.0.1:27017/chatMongo"//URL local
 const usuariosDB = config.BDusuarios
@@ -39,8 +38,8 @@ const app = express();
 
 
 
-const server = app.listen(puerto, () => {
-    console.log(`server on port ${puerto} en el modo, ${config.Modo}, en el proceso ${process.pid}`)
+const server = app.listen(PORT, () => {
+    console.log(`server on port ${PORT} en el modo, ${config.Modo}, en el proceso ${process.pid}`)
 })
 
 
